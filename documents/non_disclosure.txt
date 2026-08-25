@@ -1,0 +1,23 @@
+NON-DISCLOSURE AGREEMENT
+
+This Non-Disclosure Agreement is between ABC Technologies Pvt. Ltd. and XYZ Solutions Pvt. Ltd.
+
+1. Confidential Information
+
+Confidential information includes business plans, technical information, customer information, and pricing information.
+
+2. Use of Information
+
+The receiving party may use confidential information only for evaluating the business relationship.
+
+3. Confidentiality Period
+
+The confidentiality obligations remain effective for 3 years after disclosure.
+
+4. Return of Information
+
+Upon request, the receiving party must return or destroy confidential information.
+
+5. Exceptions
+
+Information that is already publicly available is not considered confidential information.
