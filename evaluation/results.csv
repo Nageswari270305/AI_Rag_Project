@@ -1,0 +1,31 @@
+id,question,sampling,answer,status
+1,What is the termination notice period?,curated,The termination notice period is 60 days (written notice).,success
+2,What are the payment terms?,curated,"Based on the provided documents:
+
+* **Original Service Agreement:** The customer must pay each invoice within 30 days of receiving it.
+* **Contract Amendment No. 1:** The payment period is changed to 45 days from the date of the invoice (effective 1 January 2026).",success
+3,What are the confidentiality obligations?,curated,"Based on the provided documents, the confidentiality obligations are as follows:
+
+* **General Duty:** Both parties must keep confidential information received during the agreement confidential (*Service Agreement*).
+* **Permitted Use:** The receiving party may use confidential information only for evaluating the business relationship (*Non-Disclosure Agreement*).
+* **Duration:** Confidentiality obligations remain effective for 3 years after disclosure (*Non-Disclosure Agreement*).
+* **Return or Destruction:** Upon request, the receiving party must return or destroy confidential information (*Non-Disclosure Agreement*).
+
+*(Note: Information that is already publicly available is excluded from being considered confidential information).*",success
+4,What happens after termination of the agreement?,curated,I couldn't find this information in the provided contract documents.,success
+5,Who is responsible for providing notice?,curated,Either party may provide notice to terminate the agreement.,success
+6,What is the duration of the agreement?,random,"Based on the provided contract documents:
+
+* **Service Agreement:** The initial contract term of 24 months was changed to **36 months** under Contract Amendment No. 1 (effective 1 January 2026).
+* **Non-Disclosure Agreement:** The confidentiality obligations remain effective for **3 years** after disclosure.",success
+7,What law governs the agreement?,random,"According to the Service Agreement, the agreement is governed by the laws applicable in India.",success
+8,Where should notices be sent?,random,I couldn't find this information in the provided contract documents.,success
+9,What are the obligations of the parties?,random,"Based on the provided documents, the obligations of the parties include:
+
+* **Confidentiality:** Both parties must keep confidential information received during the agreement confidential. Under the Non-Disclosure Agreement:
+  * The receiving party may only use confidential information to evaluate the business relationship.
+  * Confidentiality obligations remain in effect for 3 years after disclosure.
+  * Upon request, the receiving party must return or destroy confidential information.
+* **Payment Obligations:** The customer must pay each invoice within 45 days from the date of the invoice (amended from the original 30 days).
+* **Termination Notice:** Either party must provide 60 days written notice to terminate the Service Agreement.",success
+10,What happens if one party breaches the agreement?,random,I couldn't find this information in the provided contract documents.,success

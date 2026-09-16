@@ -1,0 +1,4 @@
+Rank,Taxonomy,Trace Count,Percentage
+1,generation_api_failure,9,45.0
+2,successful_answer,8,40.0
+3,information_not_found,3,15.0
