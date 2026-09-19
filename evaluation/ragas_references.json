@@ -1,0 +1,34 @@
+[
+    {
+        "trace_id": 1,
+        "reference": "The termination notice period is 60 days in writing."
+    },
+    {
+        "trace_id": 2,
+        "reference": "The original payment period was 30 days, and Contract Amendment No. 1 changed it to 45 days from the invoice date."
+    },
+    {
+        "trace_id": 3,
+        "reference": "The parties must keep confidential information confidential. It may be used only for evaluating the business relationship, confidentiality obligations continue for 3 years after disclosure, and confidential information must be returned or destroyed upon request."
+    },
+    {
+        "trace_id": 4,
+        "reference": "The provided contract documents do not specify what happens after termination of the agreement."
+    },
+    {
+        "trace_id": 5,
+        "reference": "Either party may provide the termination notice."
+    },
+    {
+        "trace_id": 6,
+        "reference": "The Service Agreement term was originally 24 months and was amended to 36 months. The confidentiality obligations under the Non-Disclosure Agreement continue for 3 years after disclosure."
+    },
+    {
+        "trace_id": 7,
+        "reference": "The agreement is governed by the laws applicable in India."
+    },
+    {
+        "trace_id": 9,
+        "reference": "The parties' obligations include payment, confidentiality, permitted use of confidential information, return or destruction of confidential information, and providing 60 days written notice for termination."
+    }
+]

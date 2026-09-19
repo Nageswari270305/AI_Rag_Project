@@ -17,7 +17,6 @@ from src.Reciprocal_rank_fusion import reciprocal_rank_fusion
 from src.generator import generate_answer
 
 
-# Load questions
 with open(
     "evaluation/questions.json",
     "r",
@@ -26,12 +25,31 @@ with open(
     questions = json.load(file)
 
 
-# Create traces folder
+print("Questions type:", type(questions))
+print("Number of questions:", len(questions))
+
+if not isinstance(questions, list):
+    raise ValueError(
+        "questions.json must contain a list of question objects."
+    )
+
+if len(questions) < 20:
+    raise ValueError(
+        "questions.json must contain at least 20 questions."
+    )
+
+print("First question:", questions[0])
+
+
 traces_folder = "evaluation/traces"
-os.makedirs(traces_folder, exist_ok=True)
+
+os.makedirs(
+    traces_folder,
+    exist_ok=True
+)
 
 
-for item in questions:
+for item in questions[:20]:
 
     question_id = item["id"]
     question = item["question"]
@@ -42,9 +60,6 @@ for item in questions:
 
     print(f"Question: {question}")
 
-    # --------------------------------
-    # Prediction
-    # --------------------------------
 
     prediction = (
         "I expect hybrid retrieval using Dense Search + "
@@ -56,41 +71,36 @@ for item in questions:
     print("-" * 60)
     print(prediction)
 
-    # --------------------------------
-    # Dense retrieval
-    # --------------------------------
+    print("\nRunning Dense Search...")
 
     dense_results = search_documents(
         question,
         top_k=20
     )
 
-    # --------------------------------
-    # BM25 retrieval
-    # --------------------------------
+    print("Running BM25 Search...")
 
     bm25_results = bm25_search(
         question,
         top_k=20
     )
 
-    # --------------------------------
-    # Hybrid / RRF
-    # --------------------------------
+
+    print("Running Hybrid Retrieval...")
 
     hybrid_results = reciprocal_rank_fusion(
         dense_results,
         bm25_results
     )
 
+
     final_results = [
         result["point"]
         for result in hybrid_results[:5]
     ]
 
-    # --------------------------------
-    # Generate answer
-    # --------------------------------
+
+    print("\nGenerating answer...")
 
     try:
 
@@ -107,9 +117,6 @@ for item in questions:
 
         status = "error"
 
-    # --------------------------------
-    # Sources
-    # --------------------------------
 
     sources = []
 
@@ -117,12 +124,10 @@ for item in questions:
 
         sources.append({
             "document": result.payload["document"],
-            "page": result.payload["page"]
+            "page": result.payload["page"],
+            "text": result.payload["text"]
         })
 
-    # --------------------------------
-    # Save complete trace
-    # --------------------------------
 
     trace = {
         "trace_id": question_id,
@@ -192,12 +197,13 @@ for item in questions:
     print("-" * 60)
     print(trace_file)
 
-    # Avoid Gemini rate-limit problems
-    if question_id < len(questions):
-        print("\nWaiting 35 seconds before next question...")
+    if question_id < 20:
+        print(
+            "\nWaiting 35 seconds before next question..."
+        )
         time.sleep(35)
 
 
 print("\n" + "=" * 60)
-print("ALL 20 TRACES COMPLETED")
+print("TRACES 12–20 COMPLETED")
 print("=" * 60)

@@ -1,0 +1,42 @@
+[
+    {
+        "trace_id": 1,
+        "judge_result": "```json\n{\n    \"score\": 10,\n    \"explanation\": \"The answer is completely accurate, directly answers the question, and is fully supported by both the Service Agreement and Contract Amendment No. 1.\"\n}\n```",
+        "judge_score": 10
+    },
+    {
+        "trace_id": 3,
+        "judge_result": "```json\n{\n    \"score\": 10,\n    \"explanation\": \"The answer is completely accurate, highly faithful to the source texts, and covers the confidentiality obligations from both the Non-Disclosure Agreement and the Service Agreement without introducing external information.\"\n}\n```",
+        "judge_score": 10
+    },
+    {
+        "trace_id": 5,
+        "judge_result": "```json\n{\n    \"score\": 10,\n    \"explanation\": \"The answer is accurate, fully supported by the contract context (Section 4 of the Service Agreement), and directly answers the question.\"\n}\n```",
+        "judge_score": 10
+    },
+    {
+        "trace_id": 2,
+        "judge_score": 10,
+        "judge_result": "{\n    \"score\": 10,\n    \"explanation\": \"The answer is completely correct, faithful to the text, highly relevant, and strictly grounded in the contract and its amendment.\"\n}"
+    },
+    {
+        "trace_id": 4,
+        "judge_score": 10,
+        "judge_result": "{\n    \"score\": 10,\n    \"explanation\": \"The provided contract contexts do not contain any provisions detailing what happens specifically after the termination of the agreement (such as post-termination obligations, survival clauses, or final settlements). The answer correctly and faithfully states that the information could not be found, without hallucinating outside knowledge.\"\n}"
+    },
+    {
+        "trace_id": 6,
+        "judge_score": 10,
+        "judge_result": "{\n    \"score\": 10,\n    \"explanation\": \"The answer is completely correct, faithful to the context, highly relevant, and correctly accounts for the amendment to the Service Agreement as well as the separate NDA.\"\n}"
+    },
+    {
+        "trace_id": 7,
+        "judge_score": 10,
+        "judge_result": "{\n    \"score\": 10,\n    \"explanation\": \"The answer correctly identifies that the agreement is governed by the laws applicable in India, directly citing and faithfully reflecting the provision found in the Service Agreement context without any unsupported outside information.\"\n}"
+    },
+    {
+        "trace_id": 9,
+        "judge_score": 10,
+        "judge_result": "{\n    \"score\": 10,\n    \"explanation\": \"The answer is entirely correct, faithful to the provided context, directly answers the question, and correctly incorporates amendments from the supplementary document without relying on outside information.\"\n}"
+    }
+]

@@ -1,0 +1,202 @@
+[
+    {
+        "trace_id": 1,
+        "question": "What is the termination notice period?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What is the termination notice period?",
+            "answer": "The termination notice period is 60 days.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.315304499999911
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What is the termination notice period?",
+            "answer": "The termination notice period is 60 days.",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.0096200999978464
+        }
+    },
+    {
+        "trace_id": 2,
+        "question": "What are the payment terms?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What are the payment terms?",
+            "answer": "Based on the provided contract context, the payment period is 45 days from the date of invoice (as amended by Contract Amendment No. 1, which changed the original 30-day payment term).",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.262851600000431
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What are the payment terms?",
+            "answer": "Based on the contract evidence, the payment period is 45 days from the date of invoice.",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.092301000000589
+        }
+    },
+    {
+        "trace_id": 3,
+        "question": "What are the confidentiality obligations?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What are the confidentiality obligations?",
+            "answer": "Based on the provided contract context, the confidentiality obligations are as follows:\n\n* Both parties must keep confidential information received during the agreement confidential (from the SERVICE AGREEMENT, Section 3).\n* The receiving party may use confidential information only for evaluating the business relationship (from the NON-DISCLOSURE AGREEMENT, Section 2).\n* The confidentiality obligations remain effective for 3 years after disclosure (from the NON-DISCLOSURE AGREEMENT, Section 3).\n* Upon request, the receiving party must return or destroy confidential information (from the NON-DISCLOSURE AGREEMENT, Section 4).",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.3158903999974427
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What are the confidentiality obligations?",
+            "answer": "Based on the provided contract evidence, the confidentiality obligations are as follows:\n\n* The receiving party may use confidential information only for evaluating the business relationship (NON.pdf, Page 1).\n* The confidentiality obligations remain effective for 3 years after disclosure (NON.pdf, Page 1).\n* Both parties must keep confidential information received during the agreement confidential (SERVICE AGREEMENT.pdf, Page 1).",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.4962111999993795
+        }
+    },
+    {
+        "trace_id": 4,
+        "question": "What happens after termination of the agreement?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What happens after termination of the agreement?",
+            "answer": "Based on the provided contract context, there is no information explaining what happens after the termination of the agreement.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.0452529000031063
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What happens after termination of the agreement?",
+            "answer": "Based on the provided contract evidence, the contract does not contain information about what happens after the termination of the agreement. Therefore, the information is not available.",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.4393344999989495
+        }
+    },
+    {
+        "trace_id": 5,
+        "question": "Who is responsible for providing notice?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "Who is responsible for providing notice?",
+            "answer": "Based on the provided contract context, either party may terminate the agreement by providing notice (specifically, 60 days written notice). Therefore, **either party** is responsible for providing notice.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.816313600000285
+        },
+        "agent": {
+            "system": "agent",
+            "question": "Who is responsible for providing notice?",
+            "answer": "Based on the provided contract evidence, \"Either party\" may terminate the agreement by providing notice (specifically, 60 days written notice).",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.6135504999983823
+        }
+    },
+    {
+        "trace_id": 6,
+        "question": "What is the duration of the agreement?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What is the duration of the agreement?",
+            "answer": "Based on the provided contract context, the initial term of the Service Agreement is 24 months, which is amended to 36 months by Contract Amendment No. 1.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.1151496000020416
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What is the duration of the agreement?",
+            "answer": "Based on the provided contract evidence, the duration (term) of the agreement is 36 months from the effective date (as modified from the original 24 months by Contract Amendment No. 1).",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.6630332000022463
+        }
+    },
+    {
+        "trace_id": 7,
+        "question": "What law governs the agreement?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What law governs the agreement?",
+            "answer": "Based on the provided contract context, the agreement is governed by the laws applicable in India.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.0782252999997581
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What law governs the agreement?",
+            "answer": "The agreement is governed by the laws applicable in India.",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.343422300000384
+        }
+    },
+    {
+        "trace_id": 9,
+        "question": "What are the obligations of the parties?",
+        "workflow": {
+            "system": "fixed_workflow",
+            "question": "What are the obligations of the parties?",
+            "answer": "Based on the provided contract documents, the obligations of the parties are as follows:\n\n* **Payment Terms:** The customer must pay each invoice within 30 days of receiving the invoice (as amended to 45 days from the date of the invoice per Contract Amendment No. 1).\n* **Confidentiality (Service Agreement):** Both parties must keep confidential information received during the agreement confidential.\n* **Use of Information (Non-Disclosure Agreement):** The receiving party may use confidential information only for evaluating the business relationship.\n* **Confidentiality Period (Non-Disclosure Agreement):** The confidentiality obligations remain effective for 3 years after disclosure.\n* **Return of Information (Non-Disclosure Agreement):** Upon request, the receiving party must return or destroy confidential information.\n* **Termination Notice:** Either party may terminate the agreement by providing 60 days written notice.",
+            "tool_calls": 1,
+            "llm_calls": 1,
+            "steps": 2,
+            "status": "success",
+            "latency_seconds": 1.6330780999996932
+        },
+        "agent": {
+            "system": "agent",
+            "question": "What are the obligations of the parties?",
+            "answer": "Based on the provided contract evidence, the obligations of the parties are as follows:\n\n* **Payment:** The customer must pay each invoice within 30 days of receiving the invoice (as amended by Contract Amendment No. 1 to 45 days from the date of invoice).\n* **Confidentiality (Service Agreement):** Both parties must keep confidential information received during the agreement confidential.\n* **Use of Information (Non-Disclosure Agreement):** The receiving party may use confidential information only for evaluating the business relationship, and these confidentiality obligations remain effective for 3 years after disclosure.\n* **Return of Information:** Upon request, the receiving party must return or destroy confidential information.",
+            "tool_calls": 1,
+            "llm_calls": 3,
+            "steps": 2,
+            "stopped_by": "final_action",
+            "status": "success",
+            "latency_seconds": 3.09847919999811
+        }
+    }
+]

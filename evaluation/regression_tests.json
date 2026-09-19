@@ -1,0 +1,26 @@
+[
+    {
+        "trace_id": 1,
+        "question": "What is the termination notice period?",
+        "expected_contains": ["60 days"],
+        "reason": "Termination notice must remain 60 days."
+    },
+    {
+        "trace_id": 2,
+        "question": "What are the payment terms?",
+        "expected_contains": ["45 days"],
+        "reason": "The amendment changes the payment period from 30 days to 45 days."
+    },
+    {
+        "trace_id": 6,
+        "question": "What is the duration of the agreement?",
+        "expected_contains": ["36 months"],
+        "reason": "The amendment changes the contract term to 36 months."
+    },
+    {
+        "trace_id": 7,
+        "question": "What law governs the agreement?",
+        "expected_contains": ["India"],
+        "reason": "The Service Agreement states that Indian law governs the agreement."
+    }
+]

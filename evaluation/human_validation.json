@@ -1,0 +1,50 @@
+[
+    {
+        "trace_id": 1,
+        "human_score": 10,
+        "human_label": "pass",
+        "reason": "The answer correctly states the 60-day termination notice period, supported by the contract."
+    },
+    {
+        "trace_id": 2,
+        "human_score": 10,
+        "human_label": "pass",
+        "reason": "The answer correctly explains that the payment period changed from 30 days to 45 days."
+    },
+    {
+        "trace_id": 3,
+        "human_score": 9,
+        "human_label": "pass",
+        "reason": "The answer correctly summarizes the confidentiality obligations using the contract context."
+    },
+    {
+        "trace_id": 4,
+        "human_score": 9,
+        "human_label": "pass",
+        "reason": "The answer does not invent information and correctly says it could not find the information in the documents."
+    },
+    {
+        "trace_id": 5,
+        "human_score": 10,
+        "human_label": "pass",
+        "reason": "The answer correctly states that either party can provide the termination notice."
+    },
+    {
+        "trace_id": 6,
+        "human_score": 9,
+        "human_label": "pass",
+        "reason": "The answer correctly identifies the amended 36-month contract term and the separate 3-year confidentiality period."
+    },
+    {
+        "trace_id": 7,
+        "human_score": 10,
+        "human_label": "pass",
+        "reason": "The answer correctly states that the agreement is governed by the laws applicable in India."
+    },
+    {
+        "trace_id": 9,
+        "human_score": 9,
+        "human_label": "pass",
+        "reason": "The answer gives a relevant summary of the parties' obligations supported by the retrieved context."
+    }
+]
