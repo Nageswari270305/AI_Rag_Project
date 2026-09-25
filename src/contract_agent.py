@@ -72,7 +72,6 @@ Rules:
     )
 
     text = response.text.strip()
-
     if text.startswith("```json"):
         text = text[7:]
 
@@ -128,19 +127,18 @@ Rules:
 
 def run_contract_agent(question):
     """
-    ReAct-style agent loop.
+    ReAct-style contract agent.
+
+    Week 8 improvement:
+    After a successful hybrid search, the agent
+    directly generates the final answer instead of
+    making an unnecessary second decision.
 
     Question
        ↓
     Decide action
        ↓
-    Tool
-       ↓
-    Observation
-       ↓
-    Decide again
-       ↓
-    ...
+    Hybrid search
        ↓
     Final answer
     """
@@ -149,6 +147,8 @@ def run_contract_agent(question):
 
     tool_calls = 0
     llm_calls = 0
+
+    trajectory = []
 
     for step in range(1, MAX_STEPS + 1):
 
@@ -171,12 +171,21 @@ def run_contract_agent(question):
 
         llm_calls += 1
 
+        trajectory.append(
+            f"choose:{action}"
+        )
+
         print(
             f"Agent step {step}: "
             f"selected action = {action}"
         )
 
+    
         if action == "final":
+
+            trajectory.append(
+                "generate:answer"
+            )
 
             answer = generate_final_answer(
                 question,
@@ -193,8 +202,10 @@ def run_contract_agent(question):
                 "llm_calls": llm_calls,
                 "steps": step,
                 "stopped_by": "final_action",
+                "trajectory": trajectory,
             }
 
+ 
         if action not in TOOLS:
 
             raise ValueError(
@@ -207,6 +218,10 @@ def run_contract_agent(question):
 
         tool_calls += 1
 
+        trajectory.append(
+            f"tool:{action}"
+        )
+
         formatted_result = (
             format_tool_results(
                 tool_result
@@ -217,6 +232,36 @@ def run_contract_agent(question):
             f"Tool: {action}\n"
             f"{formatted_result}"
         )
+
+        if action == "hybrid_search":
+
+            trajectory.append(
+                "generate:answer"
+            )
+
+            answer = generate_final_answer(
+                question,
+                observations
+            )
+
+            llm_calls += 1
+
+            return {
+                "system": "agent",
+                "question": question,
+                "answer": answer,
+                "tool_calls": tool_calls,
+                "llm_calls": llm_calls,
+                "steps": step,
+                "stopped_by": (
+                    "direct_final_after_hybrid_search"
+                ),
+                "trajectory": trajectory,
+            }
+
+    trajectory.append(
+        "stop:max_steps"
+    )
 
     return {
         "system": "agent",
@@ -229,4 +274,5 @@ def run_contract_agent(question):
         "llm_calls": llm_calls,
         "steps": MAX_STEPS,
         "stopped_by": "max_steps",
+        "trajectory": trajectory,
     }

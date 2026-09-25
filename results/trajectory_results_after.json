@@ -1,0 +1,78 @@
+[
+    {
+        "trace_id": 1,
+        "question": "What is the termination notice period?",
+        "status": "success",
+        "agent": {
+            "system": "agent",
+            "question": "What is the termination notice period?",
+            "answer": "The termination notice period is 60 days.",
+            "tool_calls": 1,
+            "llm_calls": 2,
+            "steps": 1,
+            "stopped_by": "direct_final_after_hybrid_search",
+            "trajectory": [
+                "choose:hybrid_search",
+                "tool:hybrid_search",
+                "generate:answer"
+            ]
+        }
+    },
+    {
+        "trace_id": 2,
+        "question": "What are the payment terms?",
+        "status": "success",
+        "agent": {
+            "system": "agent",
+            "question": "What are the payment terms?",
+            "answer": "Based on the contract evidence, the payment period is 45 days from the date of invoice.",
+            "tool_calls": 1,
+            "llm_calls": 2,
+            "steps": 1,
+            "stopped_by": "direct_final_after_hybrid_search",
+            "trajectory": [
+                "choose:hybrid_search",
+                "tool:hybrid_search",
+                "generate:answer"
+            ]
+        }
+    },
+    {
+        "trace_id": 4,
+        "question": "What happens after termination of the agreement?",
+        "status": "success",
+        "agent": {
+            "system": "agent",
+            "question": "What happens after termination of the agreement?",
+            "answer": "Based on the provided contract evidence, the information about what happens after the termination of the agreement is not available.",
+            "tool_calls": 1,
+            "llm_calls": 2,
+            "steps": 1,
+            "stopped_by": "direct_final_after_hybrid_search",
+            "trajectory": [
+                "choose:hybrid_search",
+                "tool:hybrid_search",
+                "generate:answer"
+            ]
+        }
+    },
+    {
+        "trace_id": 5,
+        "question": "Who is responsible for providing notice?",
+        "status": "success",
+        "agent": {
+            "system": "agent",
+            "question": "Who is responsible for providing notice?",
+            "answer": "Based on the provided contract evidence, \"Either party\" may terminate the agreement and is responsible for providing the written notice.",
+            "tool_calls": 1,
+            "llm_calls": 2,
+            "steps": 1,
+            "stopped_by": "direct_final_after_hybrid_search",
+            "trajectory": [
+                "choose:hybrid_search",
+                "tool:hybrid_search",
+                "generate:answer"
+            ]
+        }
+    }
+]
